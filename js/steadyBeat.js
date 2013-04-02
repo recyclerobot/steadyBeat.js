@@ -29,8 +29,6 @@
 		intervalTime = (tempo) ? tempo : intervalTime;
 		timestamp = (new Date()).getTime();
 		run();
-		steadyBeat.loop();
-
 	};
 	steadyBeat.stop = function()
 	{

@@ -40,31 +40,35 @@
 
     <script src="js/steadyBeat.js"></script>
     <script>
-        // EXAMPLE USAGE
-        var intervalTime = 800;
-        var metronom = new Howl({
-            urls: ['sound/metronom.wav']
-        })
+        $(document).ready(function(){
+            // EXAMPLE USAGE
+            var intervalTime = 600;
+            var metronom = new Howl({
+                urls: ['sound/metronom.wav'],
+                onload: function(){
+                    steadyBeat.setReturnLoop(function(){
+                        $("#logo img").animate({
+                            "width": 192,
+                            "height": 219,
+                            "marginLeft": -96,
+                            "marginTop": -109
+                        }, (intervalTime/2)-(intervalTime/100)*10, function(){
+                            $("#logo img").animate({
+                                "width": 96,
+                                "height": 109,
+                                "marginLeft": -48,
+                                "marginTop": -54
+                            }, (intervalTime/2)-(intervalTime/100)*10)
+                        });
+                        metronom.play();
+                    });
+                    // 2. start our metronome and define tempo
+                    steadyBeat.start(intervalTime); // set Tempo to 300 milliseconds
+                }
+            })
 
-        steadyBeat.setReturnLoop(function(){
-            $("#logo img").animate({
-                "width": 192,
-                "height": 219,
-                "marginLeft": -96,
-                "marginTop": -109
-            }, (intervalTime/2)-(intervalTime/100)*10, function(){
-                $("#logo img").animate({
-                    "width": 96,
-                    "height": 109,
-                    "marginLeft": -48,
-                    "marginTop": -54
-                }, (intervalTime/2)-(intervalTime/100)*10)
-            });
-            metronom.play();
+            
         });
-        // 2. start our metronome and define tempo
-        steadyBeat.start(intervalTime); // set Tempo to 300 milliseconds
-        
     </script>
 
 </body>
