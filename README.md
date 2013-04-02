@@ -1,7 +1,9 @@
 steadyBeat.js
 ===========
 
-Javascript metronom using browser clock
+Javascript metronom using browser clock  
+written by We Work We Play  
+[weworkweplay.com](http://weworkweplay.com)
 
 Usage
 ===
