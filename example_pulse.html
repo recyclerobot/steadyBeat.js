@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+    <meta charset="utf-8">
+    <title>Metronome Empty Example</title>
+    <style>
+        body{
+            background-color: #000;
+        }
+        #container{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+        }
+        #logo img{
+            margin: -54px 0 0 -48px;
+        }
+    </style>
+</head>
+
+<!--
+ _    _        _    _            _      _    _       ______ _             
+| |  | |      | |  | |          | |    | |  | |      | ___ \ |            
+| |  | | ___  | |  | | ___  _ __| | __ | |  | | ___  | |_/ / | __ _ _   _ 
+| |/\| |/ _ \ | |/\| |/ _ \| '__| |/ / | |/\| |/ _ \ |  __/| |/ _` | | | |
+\  /\  /  __/ \  /\  / (_) | |  |   <  \  /\  /  __/ | |   | | (_| | |_| |
+ \/  \/ \___|  \/  \/ \___/|_|  |_|\_\  \/  \/ \___| \_|   |_|\__,_|\__, |
+                                                                     __/ |
+                                                                    |___/ 
+-->
+
+<body>
+    <div id="container">
+        <div id="logo"><img src='http://weworkweplay.com/img/wwwp.png' width="96" height="109"></div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
+    <script src="https://raw.github.com/goldfire/howler.js/master/howler.min.js"></script>
+
+    <script src="js/steadyBeat.js"></script>
+    <script>
+        // EXAMPLE USAGE
+        var intervalTime = 800;
+        var metronom = new Howl({
+            urls: ['sound/metronom.wav']
+        })
+
+        steadyBeat.setReturnLoop(function(){
+            $("#logo img").animate({
+                "width": 192,
+                "height": 219,
+                "marginLeft": -96,
+                "marginTop": -109
+            }, (intervalTime/2)-(intervalTime/100)*10, function(){
+                $("#logo img").animate({
+                    "width": 96,
+                    "height": 109,
+                    "marginLeft": -48,
+                    "marginTop": -54
+                }, (intervalTime/2)-(intervalTime/100)*10)
+            });
+            metronom.play();
+        });
+        // 2. start our metronome and define tempo
+        steadyBeat.start(intervalTime); // set Tempo to 300 milliseconds
+        
+    </script>
+
+</body>
+</html>
