@@ -2,7 +2,7 @@ steadyBeat.js
 ===========
 
 Javascript metronome using browser clock  
-written by We Work We Play  
+written by Thijs at We Work We Play  
 [weworkweplay.com](http://weworkweplay.com)
 
 Usage
