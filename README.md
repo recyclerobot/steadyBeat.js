@@ -2,7 +2,8 @@ steadyBeat.js
 ===========
 
 Javascript metronome using browser clock  
-written by Thijs at We Work We Play  
+written by Thijs (@recyclerobot)  
+at We Work We Play  
 [weworkweplay.com](http://weworkweplay.com)
 
 Usage
@@ -19,3 +20,8 @@ Usage
         steadyBeat.start(300); // set Tempo to 300 milliseconds
         
     </script>
+    
+Demo
+===
+[http://thijs.wolk.io/metronome/example_pulse.html](http://thijs.wolk.io/metronome/example_pulse.html)  
+[http://thijs.wolk.io/metronome/example_empty.html](http://thijs.wolk.io/metronome/example_empty.html) (just returns console logs)
