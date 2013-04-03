@@ -23,5 +23,4 @@ Usage
     
 Demo
 ===
-[http://thijs.wolk.io/metronome/example_pulse.html](http://thijs.wolk.io/metronome/example_pulse.html)  
-[http://thijs.wolk.io/metronome/example_empty.html](http://thijs.wolk.io/metronome/example_empty.html) (just returns console logs)
+[http://recyclerobot.github.com/steadyBeat.js/](http://recyclerobot.github.com/steadyBeat.js/)  
