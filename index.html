@@ -5,7 +5,7 @@
     <title>Metronome Empty Example</title>
     <style>
         body{
-            background-color: #000;
+            background-color: #fff;
         }
         #container{
             position: absolute;
@@ -13,7 +13,7 @@
             top: 50%;
         }
         #logo img{
-            margin: -54px 0 0 -48px;
+            margin: -62px 0 0 -62px;
         }
     </style>
 </head>
@@ -32,12 +32,11 @@
 <body>
     <a href="https://github.com/recyclerobot/steadyBeat.js/"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub"></a>
     <div id="container">
-        <div id="logo"><img src='http://weworkweplay.com/img/wwwp.png' width="96" height="109"></div>
+        <div id="logo"><img src='http://weworkweplay.com/logo.png' width="125" height="125"></div>
     </div>
 
-    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
-    <script src="https://raw.github.com/goldfire/howler.js/master/howler.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/1.1.26/howler.min.js"></script>
 
     <script src="js/steadyBeat.js"></script>
     <script>
@@ -49,16 +48,16 @@
                 onload: function(){
                     steadyBeat.setReturnLoop(function(){
                         $("#logo img").animate({
-                            "width": 192,
-                            "height": 219,
-                            "marginLeft": -96,
-                            "marginTop": -109
+                            "width": 125,
+                            "height": 125,
+                            "marginLeft": -62,
+                            "marginTop": -62
                         }, (intervalTime/2)-(intervalTime/100)*10, function(){
                             $("#logo img").animate({
-                                "width": 96,
-                                "height": 109,
-                                "marginLeft": -48,
-                                "marginTop": -54
+                                "width": 250,
+                                "height": 250,
+                                "marginLeft": -125,
+                                "marginTop": -125
                             }, (intervalTime/2)-(intervalTime/100)*10)
                         });
                         metronom.play();
